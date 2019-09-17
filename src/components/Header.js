@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from '../logo.svg';
 import { Counter } from './Counter';
+import { Api } from './Api';
 
 export class Header extends Component{
     render() {
@@ -14,6 +15,7 @@ export class Header extends Component{
            {this.props.data.a}
           </p>
           <Counter />
+          <Api />
         </header>
       );
   }
