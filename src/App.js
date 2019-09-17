@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-
 import './App.css';
 import { Header, Header2 } from './components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import './components/image'
 // import Header from './components/Header';

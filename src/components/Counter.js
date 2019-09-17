@@ -19,7 +19,7 @@ export class Counter extends Component{
     return (
         <div>
             <div>Count: {this.state.count}</div>
-            <button className="btn" onClick={this.BtnClick}>
+            <button className="btn btn-danger" onClick={this.BtnClick}>
                     Increase 
             </button>
         </div>

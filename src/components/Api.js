@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
+import {Item} from './Item';
 export class Api extends Component{
 
     constructor(props) {
@@ -27,12 +27,15 @@ export class Api extends Component{
     render() {
       return (
           <div className="App-Api" >
-    
+            <div className="row">
+                  
               {
                   this.state.posts.map(post =>
-                      <li key={post.id}>{post.id}</li>
+                      <Item id={post.id} title={post.title} body={post.body} key={post.id}></Item>
                   )
               }
+
+            </div>
              
        
         </div>
