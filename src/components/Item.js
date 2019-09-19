@@ -1,20 +1,94 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 export class Item extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { classes: {
+            root: {
+              flexGrow: 1,
+            },
+            paper: {
+                margin: 'auto',
+                maxWidth: 300,
+              },
+              
+              img: {
+                margin: 'auto',
+                display: 'block',
+                maxWidth: '100%',
+                maxHeight: '100%',
+              },
+          }
+        }
+        
+        }
+    giveImg = ( key) => {
+        return 'https://picsum.photos/id/'+key+'/150/100'
     }
     render() { 
         return (
-            <div className="col-md-2 text-left">
+<React.Fragment>
 
-            <div className="App-Api" >
-                {this.props.id} - {this.props.title}
+                <Grid item xs={6}>
+                    <div className={this.state.classes.root}>
+                        
+                    <Paper className={this.state.classes.paper} style={{ padding: '15px' }}>
+                            <Grid container spacing={2}>
+                            <Grid item>
+                    
+                                    <img className={this.state.classes.img} alt="complex" src={this.giveImg(this.props.random)}/>
+                                
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom variant="subtitle1">
+                                    Standard license {this.props.id}
+                                    </Typography>
+                                    <Typography variant="body2" gutterBottom>
+                                    Full resolution 1920x1080 • JPEG
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary">
+                                    ID: 1030114
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                        <Typography variant="body2" style={{ cursor: 'pointer',color: 'scondary' }   }>
+                                    Remove
+                                    </Typography>
+                                </Grid>
+                                </Grid>
+                                <Grid item>
+                                <Typography variant="subtitle1">$19.00</Typography>
+                                </Grid>
+                            </Grid>
+                            </Grid>
+                        </Paper>
+                </div>
+                </Grid>
                 
-            </div>
-            <small>{this.props.body}</small>
-            </div>
+</React.Fragment>
+
+
+
+            
+            // <div className="col-md-2 text-left">
+
+            // <div className="App-Api" >
+            //     {this.props.id} - {this.props.title}
+                
+            // </div>
+            // {/* <small>{this.props.body}</small> */}
+            // </div>
         );
     }
 }

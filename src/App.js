@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import './App.css';
-import { Header, Header2 } from './components/Header';
+import { Api } from './components/Api'
+import { Header } from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from '@material-ui/core/Container';
 
 // import './components/image'
 // import Header from './components/Header';
@@ -10,12 +11,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
-    
-    <div className="App">
-        <Header data={{ a: 5, b: 2 }} />
-    </div>
-    </div>
+    <React.Fragment>
+        <Container fixed>
+          <Api />
+        </Container>
+    </React.Fragment>
 
   );
 }
