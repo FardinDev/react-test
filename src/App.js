@@ -3,7 +3,7 @@ import { Api } from './components/Api'
 import { Header } from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from '@material-ui/core/Container';
-
+import {Dots} from 'react-preloaders';
 // import './components/image'
 // import Header from './components/Header';
 
@@ -12,9 +12,10 @@ import Container from '@material-ui/core/Container';
 function App() {
   return (
     <React.Fragment>
-        <Container fixed>
+        <Container maxWidth="xl">
           <Api />
         </Container>
+        {/* <Dots /> */}
     </React.Fragment>
 
   );

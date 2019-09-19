@@ -8,7 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import ButtonBase from '@material-ui/core/ButtonBase';
-
+import ProgressiveImage from "./ProgressiveImage";
+import { Picture } from 'react-responsive-picture';
 export class Item extends Component {
     constructor(props) {
         super(props);
@@ -21,12 +22,6 @@ export class Item extends Component {
                 maxWidth: 300,
               },
               
-              img: {
-                margin: 'auto',
-                display: 'block',
-                maxWidth: '100%',
-                maxHeight: '100%',
-              },
           }
         }
         
@@ -38,15 +33,27 @@ export class Item extends Component {
         return (
 <React.Fragment>
 
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                     <div className={this.state.classes.root}>
                         
                     <Paper className={this.state.classes.paper} style={{ padding: '15px' }}>
                             <Grid container spacing={2}>
                             <Grid item>
-                    
-                                    <img className={this.state.classes.img} alt="complex" src={this.giveImg(this.props.random)}/>
-                                
+                            {/* <ProgressiveImage src={this.giveImg(this.props.random)} placeholder={this.giveImg(this.props.random)}>
+                            {src => <img src={src} alt="an image" />}
+                            </ProgressiveImage> */}
+                                    {/* <img className={this.state.classes.img} alt="complex" src={this.giveImg(this.props.random)}/>
+                                    <ProgressiveImage
+        className={"cover"}
+        alt={"woman"}
+        overlaySrc={
+            this.giveImg(this.props.random)
+        }
+        src={
+            this.giveImg(this.props.random)
+        }
+      /> */}
+                                    <Picture src={this.giveImg(this.props.random)} />
                             </Grid>
                             <Grid item xs={12} sm container>
                                 <Grid item xs container direction="column" spacing={2}>
