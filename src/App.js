@@ -4,6 +4,8 @@ import { Header } from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from '@material-ui/core/Container';
 import {Dots} from 'react-preloaders';
+import SpacingGrid from './components/Spacing';
+import SearchAppBar from './components/Navbar'
 // import './components/image'
 // import Header from './components/Header';
 
@@ -11,12 +13,13 @@ import {Dots} from 'react-preloaders';
 
 function App() {
   return (
-    <React.Fragment>
+    
         <Container maxWidth="xl">
-          <Api />
+          <SearchAppBar />
+          <SpacingGrid />
         </Container>
-        {/* <Dots /> */}
-    </React.Fragment>
+    
+
 
   );
 }

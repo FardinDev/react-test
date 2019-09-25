@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import { red } from '@material-ui/core/colors';
 
 export class Api extends Component{
 
@@ -13,6 +14,13 @@ export class Api extends Component{
       this.state = {
         posts: [],
         count: 0,
+        classes: {
+          paper: {
+            height: 140,
+            width: 100,
+            color: 'red',
+          }
+        }
         
       };
       
@@ -63,6 +71,7 @@ export class Api extends Component{
           })}       
            
             </Grid>
+
           </Grid>
     
         </div>
