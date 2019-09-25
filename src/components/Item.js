@@ -75,7 +75,7 @@ export class Item extends Component {
                                 </Grid>
                                 </Grid>
                                 <Grid item>
-                                <Typography variant="subtitle1">$19.00</Typography>
+                                <Typography variant="subtitle1">$115</Typography>
                                 </Grid>
                             </Grid>
                             </Grid>
