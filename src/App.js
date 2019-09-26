@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import {Dots} from 'react-preloaders';
 import SpacingGrid from './components/Spacing';
 import SearchAppBar from './components/Navbar'
+import Box from '@material-ui/core/Box';
 // import './components/image'
 // import Header from './components/Header';
 
@@ -13,11 +14,13 @@ import SearchAppBar from './components/Navbar'
 
 function App() {
   return (
-    
-        <Container maxWidth="xl">
+    <Box component="span">
+        <Container maxWidth="xl" p={0}>
           <SearchAppBar />
           <SpacingGrid />
         </Container>
+    </Box>
+        
     
 
 
