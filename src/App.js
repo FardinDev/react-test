@@ -18,6 +18,7 @@ function App() {
         <Container maxWidth="xl" p={0}>
           <SearchAppBar />
           <SpacingGrid />
+          <SpacingGrid />
         </Container>
     </Box>
         
